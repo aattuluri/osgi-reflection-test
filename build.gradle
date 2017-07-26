@@ -1,0 +1,33 @@
+allprojects {
+
+    apply plugin: 'java'
+
+    group = 'com.intuit.osgi.reflection'
+    version = '1.0-SNAPSHOT'
+
+    buildDir = "buildDirectory"
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+subprojects {
+
+    sourceCompatibility = 1.8
+    repositories {
+        mavenCentral()
+    }
+
+    task allDeps(type: DependencyReportTask) {}
+
+
+    dependencies {
+
+        compile 'org.osgi:org.osgi.core:4.1.0'
+
+    }
+
+}
+
