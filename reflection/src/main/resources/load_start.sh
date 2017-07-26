@@ -9,14 +9,3 @@ do
   pidlist="$pidlist $!"
   ((ctr++))
 done
-
-for job in $pidlist do
-  echo $job
-  wait $job || let "FAIL+=1"
-done
-
-if [ "$FAIL" == "0" ]; then
-  echo "YAY!"
-else
-  echo "FAIL! ($FAIL)"
-fi
