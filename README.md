@@ -27,6 +27,10 @@ JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.ssl=false"
 
 Now you should be able to launch jvisualvm and connect to JVM instance on localhost on port 19000
 
+## Logging
+The default log file is `/var/log/reflection-test.log`
+You can change the name/path here: `reflection/src/main/resources/log4j2.xml`
+
 ## Running load test
 * Start
 
